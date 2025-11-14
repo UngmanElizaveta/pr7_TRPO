@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pr_7_ungman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="750px" Width="auto">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -16,7 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="290" />
             <RowDefinition Height="120" />
-            <RowDefinition  Height="130"/>
+            <RowDefinition  Height="230"/>
             <RowDefinition  />
         </Grid.RowDefinitions>
         
@@ -39,9 +39,9 @@
 
         <StackPanel x:Name="Panel_2" Grid.Row="1" >
             <Label Content="Идентификатор"></Label>
-            <TextBox Text=""/>
+            <TextBox Text="{Binding Id}"/>
             <Label Content="Пароль"></Label>
-            <TextBox Text=""/>
+            <TextBox Text="{Binding Password}"/>
             <Button Content="Войти" Click="Button_Click"/>
         </StackPanel>
 
@@ -55,6 +55,71 @@
         
         <StackPanel Grid.Row="3">
            
+        </StackPanel>
+
+        <StackPanel x:Name="Panel_4" Grid.Column="1" Grid.RowSpan="3" Height="auto" Margin="5px 0 0 0">
+            <Label Content="Введите ID пациента для поиска"/>
+            <TextBox x:Name="ID_pacient"  Margin="0 10px 0 0"/>
+            <Button Content="Найти" Margin="0 15px 0 0" Click="Button_Click_3"/>
+        </StackPanel>
+        
+        <StackPanel x:Name="Panel_5" Grid.Column="1" Grid.RowSpan="3" Height="auto" Margin="5px 90px 0 0">
+           
+            <Label Content="Имя"></Label>
+            <Label Content="{Binding Name2}"/>
+            <Label Content="Фамилия"></Label>
+            <Label Content="{Binding LastName2}"/>
+            <Label Content="Отчество"></Label>
+            <Label Content="{Binding MiddleName2}"/>
+            <Label Content="Диагноз"></Label>
+            <Label Content="{Binding Diagnosis2}"/>
+            <Label Content="Дата рождения"></Label>
+            <Label Content="{Binding Birthday}"/>
+            <Label  Content="Первый доктор ID"></Label>
+            <Label Content="{Binding LastDoctor2}"/>
+            <Label Content="Дата последнего приема"></Label>
+            <Label Content="{Binding LastAppointment}" />
+            <Label Content="Рекомендации"></Label>
+            <Label Content="{Binding Recomendations2}"/>
+           
+        </StackPanel>
+
+        <StackPanel x:Name="Panel_6" Grid.Column="2" Grid.RowSpan="2" Margin="5px 0 0 0">
+            <Label Content="Введите Имя"></Label>
+            <TextBox Text="{Binding Name2}"/>
+            <Label Content="Введите Фамилия"></Label>
+            <TextBox Text="{Binding LastName2}"/>
+            <Label Content="Введите Отчество"></Label>
+            <TextBox Text="{Binding MiddleName2}"/>
+            <Label Content="Введите Диагноз"></Label>
+            <TextBox Text="{Binding Diagnosis2}"/>
+            <Label Content="Выберите Дату рождения"></Label>
+            <DatePicker SelectedDate="{Binding Birthday2}"/>
+            <Label  Content="Введите идентификатор последнего доктора"></Label>
+            <TextBox Text="{Binding LastDoctor2}"/>
+            <Label Content="Выберите Дату последнего приема"></Label>
+            <DatePicker SelectedDate="{Binding LastAppointment2}"/>
+            <Label Content="Введите Рекомендации"></Label>
+            <TextBox Text="{Binding Recomendations2}"/>
+            <Button Content="Добавить" Click="Button_Click2" Margin="0 15px 0 0"/>
+        </StackPanel>
+
+        <StackPanel x:Name="Panel_7" Grid.Column="2" Grid.Row="2" Margin="5px 0 0 0">
+            <Label Content="Изменение информации"/>
+            <Label Content="Диагноз"/>
+            <TextBox Text="{Binding Diagnosis2}"/>
+            <Label Content="Рекомендации"/>
+            <TextBox Text="{Binding Recomendations2}"/>
+            <Label Content="Дата последнего приема"/>
+            <DatePicker SelectedDate="{Binding LastAppointment2}"/>
+            <Button Content="Сброс" Click="Button_Click_4"/>
+            <Button Content="Изменить" Margin="0 5px 0 0" Click="Button_Click_5"/>
+        </StackPanel>
+        <StackPanel x:Name="Panel_8" Grid.Row="3">
+            <Label Content="Кол-во пользователей"/>
+            <Label Content="{Binding count_user}"/>
+            <Label Content="Кол-во пациентов"/>
+            <Label Content="{Binding count_pacient}"/>
         </StackPanel>
     </Grid>
 </Window>

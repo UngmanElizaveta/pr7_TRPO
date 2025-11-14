@@ -8,13 +8,16 @@ namespace pr_7_ungman
 {
     public class Pacient
     {
-        public string? Name { get; set; }
-        public string? LastName { get;set; }
-        public string? MiddleName { get; set; }
-        public DateTime? Birthday { get; set; }
-        public DateTime? LastAppointment { get; set; }
-        public int? LastDoctor { get; set; }
-        public string? Diagnosis { get; set; }
-        public string? Recomendations { get; set; }
+        public string Name2 { get; set; }
+        public string LastName2 { get;set; }
+        public string MiddleName2 { get; set; }
+        public DateTime Birthday2 { get; set; }
+        public DateTime LastAppointment2 { get; set; }
+        public int LastDoctor2 { get; set; }
+        public string Diagnosis2 { get; set; }
+        public string Recomendations2 { get; set; }
+        public int Id2 { get; set; }
+       
+
     }
 }
